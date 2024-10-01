@@ -1,4 +1,4 @@
-# Angry Birds Clone
+# Angry Birds
 
 ![Angry Birds](assets/angry_birds.gif)
 
