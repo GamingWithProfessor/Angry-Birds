@@ -61,14 +61,21 @@ public class SlingShotHandler : MonoBehaviour
 
         if (Mouse.current.leftButton.wasReleasedThisFrame && _BirdOnSlingShot)
         {
-            _ClickedWithInArea = false;
+            if (GameManager.Instance.HasEnoughShorts())
+            {
+                _ClickedWithInArea = false;
+                _BirdOnSlingShot = false;
 
-            _SpawnedAngryBird.LaunchBird(_Direction, _ShotForce);
-            _BirdOnSlingShot = false;
+                _SpawnedAngryBird.LaunchBird(_Direction, _ShotForce);
+                GameManager.Instance.UseShorts();                
+                SetLines(_CentrePosition.position);
 
-            SetLines(_CentrePosition.position);
-
-            StartCoroutine(SpawnAngryBirdAfterTime());
+                if (GameManager.Instance.HasEnoughShorts())
+                {
+                    StartCoroutine(SpawnAngryBirdAfterTime());
+                }
+            }
+            
         }
     }
 
