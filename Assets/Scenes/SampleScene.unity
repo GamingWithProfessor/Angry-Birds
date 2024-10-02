@@ -166,6 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 132317357}
   - component: {fileID: 132317356}
+  - component: {fileID: 132317358}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -240,6 +241,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 66960227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &132317358
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132317355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.4111588, y: 2.01}
+    newSize: {x: 150, y: 2.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4111588, y: 2.01}
+  m_EdgeRadius: 0
 --- !u!1 &133294114
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +772,10 @@ MonoBehaviour:
   _CentrePosition: {fileID: 261060574}
   _IdlePosition: {fileID: 1197366557}
   _MaxDistance: 2
+  _ShotForce: 9
   _SlingShotAreaScript: {fileID: 1766529629}
+  _AngryBird: {fileID: -8859324138209718686, guid: 9733ce0a88daa754792d8e64d7b03e8f, type: 3}
+  _AngryBirdPositionOffset: 0.125
 --- !u!1 &1142469204
 GameObject:
   m_ObjectHideFlags: 0
